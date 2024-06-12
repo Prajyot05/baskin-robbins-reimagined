@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main{
+    /* background-image: -webkit-linear-gradient( -14deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
+    /* background-image: linear-gradient( -60deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
+    /* background-image: url('../assets/main-1.svg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease-out;
+}
+
+.page1-items img{
+    cursor: pointer;
+    transition: background-color ease 0.3s;
+}
+
+.darkbrown{
+    background-color: #AF8F6F;
+}
+
+.faintgreen{
+    background-color: #548292;
+}
+
+.darkpurple{
+    background-color: #AE48D2;
+}
+
+.darkgreen{
+    background-color: #0C6848;
+}
+
+.page1-items :nth-child(1):hover{
+    background-color: #AF8F6F;
+}
+
+.page1-items :nth-child(2):hover{
+    background-color: #548292;
+}
+
+.page1-items :nth-child(3):hover{
+    background-color: #AE48D2;
+}
+
+.page1-items :nth-child(4):hover{
+    background-color: #0C6848;
+}
+  
+.board {
+    animation: shiver-animation 4s infinite linear;
+}
+  
+@keyframes shiver-animation {
+    0%, 50%, 100% {
+      transform: rotate(0deg); 
+    }
+    25% {
+      transform: rotate(0.5deg);
+    }
+    75% {
+      transform: rotate(-0.5deg);
+    }
+}
