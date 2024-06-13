@@ -2,7 +2,7 @@ import React from 'react'
 
 function NavBar() {
   return (
-    <nav className="flex w-full justify-between py-[1vw] px-[2vw] h-[13vh] shadow-[0_3px_10px_#A68661] z-99">
+    <nav className="flex w-full justify-between py-[1vw] px-[2vw] h-[13vh] shadow-[0_3px_10px_#A68661]">
         <div className="nav-left">
           <img className="w-[30vw]" src="./assets/logo.webp" alt="" />
         </div>
