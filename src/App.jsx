@@ -9,6 +9,7 @@ function App() {
   const [pageRightText, setPageRightText] = useState("right-text-1.png");
   const [rotation, setRotation] = useState(0);
   const [hide, setHide] = useState(1);
+  const [shake, setShake] = useState(false);
 
   const changeBackground = (btncolor, bgimage, text, rotation, hide) => {
     setBackgroundImage(bgimage);
@@ -16,13 +17,18 @@ function App() {
     setPageRightText(text);
     setRotation(rotation);
     setHide(hide);
+
+    setShake(true);
+    setTimeout(() => {
+      setShake(false);
+    }, 1000);
   };
 
   return (
     <>
     <div className="main min-h-screen w-full" style={{backgroundImage: `url('../assets/${backgroundImage}')` }}>
       <NavBar />
-      <Page1 changeBackground={changeBackground} activeButton={activeButton} pageRightText={pageRightText} rotation={rotation} hide={hide}/>
+      <Page1 changeBackground={changeBackground} activeButton={activeButton} pageRightText={pageRightText} rotation={rotation} hide={hide} shake={shake}/>
     </div>
     </>
   );
