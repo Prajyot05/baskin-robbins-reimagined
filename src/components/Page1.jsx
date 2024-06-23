@@ -23,8 +23,8 @@ function Page1({changeBackground, activeButton, pageRightText, rotation, hide, s
           <img className="page1-right-text w-[30vw] absolute ml-40 -mt-5" src={`./assets/${pageRightText}`} alt="" />
           <div className="circle-container rotate-[${rotation}deg] w-[100vh] h-[100vh] rounded-full relative left-[90%] top-[60%] transform -translate-x-1/2 -translate-y-1/2" style={{ transform: `translate(-50%, -50%) rotate(${rotation}deg)` }}>
             <img src="../assets/right-image-3.png" alt="" className={`absolute ${hide !== 3 && 'hidden'} mt-48 ml-48 top-0 left-1/2 rotate-180`} />
-            <img src="../assets/right-image-2.png" alt="" className={`absolute ${hide !== 2 && 'hidden'} -bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-90`} />
-            <img src="../assets/right-image-1.png" alt="" className={`absolute ${hide !== 1 && 'hidden'} w-[80%] mt-32 ml-14 top-0 left-0 transform -translate-x-1/2`} />
+            <img src="../assets/right-image-2.png" alt="" className={`absolute ${hide !== 2 && 'hidden'} -bottom-1/2 left-1/2 transform md:-translate-x-1/2 md:-translate-y-1/2 -rotate-90`} />
+            <img src="../assets/right-image-1.png" alt="" className={`absolute ${hide !== 1 && 'hidden'} w-[80%] mt-[15vh] ml-[4vw] top-0 left-0 transform -translate-x-1/2`} />
             <img src="../assets/right-image-4.png" alt="" className={`absolute ${hide !== 4 && 'hidden'} top-0 right-0 transform mr-32 -mt-64 rotate-90`} />
           </div>
         </div>
