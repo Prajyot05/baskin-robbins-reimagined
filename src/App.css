@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.main{
+.landing-page{
     /* background-image: -webkit-linear-gradient( -14deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
     /* background-image: linear-gradient( -60deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
     /* background-image: url('../assets/main-1.svg'); */
@@ -14,65 +16,46 @@
     transition: background-image 0.5s ease-out;
 }
 
-.page1-items img{
-    cursor: pointer;
-    transition: background-color ease 0.3s;
+/* Background */
+
+.background-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
-.darkbrown{
-    background-color: #AF8F6F;
+/* Navbar */
+
+.nav-clicked{
+    background-color: #fff;
 }
 
-.faintgreen{
-    background-color: #548292;
+.delivery-img{
+    transition: transform ease 0.3s;
 }
 
-.darkpurple{
-    background-color: #AE48D2;
+/* Page 1 */
+
+.title h1, .title h2{
+    font-family: "Shrikhand", serif;
+    line-height: 80%;
 }
 
-.darkgreen{
-    background-color: #0C6848;
+.title h1{
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
-.page1-items :nth-child(1):hover{
-    background-color: #AF8F6F;
+.description p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
 }
 
-.page1-items :nth-child(2):hover{
-    background-color: #548292;
-}
-
-.page1-items :nth-child(3):hover{
-    background-color: #AE48D2;
-}
-
-.page1-items :nth-child(4):hover{
-    background-color: #0C6848;
-}
-  
-.shiver-animation {
-    animation: shiver-animation 1s infinite linear;
-}
-  
-@keyframes shiver-animation {
-    0% { transform: translate(0, 0) rotateZ(0deg); }
-    10% { transform: translate(-1px, -1px) rotateZ(-1deg); }
-    20% { transform: translate(1px, 1px) rotateZ(1deg); }
-    30% { transform: translate(-1px, 1px) rotateZ(-1deg); }
-    40% { transform: translate(1px, -1px) rotateZ(1deg); }
-    50% { transform: translate(-1px, 0) rotateZ(-1deg); }
-    60% { transform: translate(1px, 0) rotateZ(1deg); }
-    70% { transform: translate(0, -1px) rotateZ(0deg); }
-    80% { transform: translate(0, 1px) rotateZ(-1deg); }
-    90% { transform: translate(0, -1px) rotateZ(1deg); }
-    100% { transform: translate(0, 0) rotateZ(0deg); }
-}
-
-.circle-container {
-    transition: all ease 1s;
-}
-
-.circle-container img{
-    transition: display ease 0.5s;
+.page1-hoverables img{
+    transition: padding ease 0.3s;
 }

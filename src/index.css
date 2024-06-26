@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: 'montserrat', sans-serif;
 }
+
+::selection{
+  color: white;
+  background-color: #c93475;
+}
  
 html, body {
   height: 100%;
