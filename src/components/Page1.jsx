@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function Page1() {
-  const leftImages = ["ice-cream-1.png", "ice-cream-2.png", "ice-cream-3.png", "ice-cream-2.png"]
+  const leftImages = ["ice-cream-1.png", "ice-cream-2.png", "ice-cream-3.png", "ice-cream-4.png"]
   const [clickedIndex, setClickedIndex] = useState(0);
 
   const onClickHandler = (index) => {

@@ -12,8 +12,8 @@ const Navbar = () => {
       <div className="nav-left cursor-pointer">
         <a href='/'><img className="logo w-[25vw] ml-[5vw]" src="./assets/logo.webp" alt="" /></a>
       </div>
-      <div className="nav-right flex items-center gap-[1vw] ml-10">
-        {['Home', 'Shop', 'Our Stores', 'About us'].map((text, index) => (
+      <div className="nav-right flex items-center gap-[1vw] ml-48">
+        {['Home', 'About us', 'Deals'].map((text, index) => (
           <h4
             key={index}
             className={`text-black text-xl px-[2rem] py-[0.2rem] rounded-[50px] transition ease-in duration-300 cursor-pointer ${clickedIndex !== index && 'hover:scale-110 hover:text-[#FFFEFE]'} ${clickedIndex === index ? 'nav-clicked' : ''}`}
