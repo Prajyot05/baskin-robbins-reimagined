@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -26,6 +28,22 @@
     z-index: -1;
 }
 
+/* Cursor */
+.cursor-enlarge:hover .cursor-outline{
+    transform: scale(1.5);
+    transition: transform ease 0.3s;
+}
+
+.css-19tgaqb-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    font-size: 1.5rem;
+    color: gray;
+    margin-left: 5rem;
+}
+
+.social-links{
+    transition: sll ease 0.3s;
+}
+
 /* Navbar */
 
 .nav-clicked{
@@ -34,6 +52,18 @@
 
 .delivery-img{
     transition: transform ease 0.3s;
+}
+
+.nav-right h4, .sidebar-social h3, .about-page h1, .stores-page h1{
+    font-family: "Kanit", sans-serif;
+}
+
+.sidebar-options h4{
+    transition: transform ease 0.3s;
+}
+
+.sidebar-options:hover h4{
+    transform: translateY(-100%);
 }
 
 /* Page 1 */
@@ -58,4 +88,42 @@
 
 .page1-hoverables img{
     transition: padding ease 0.3s;
+}
+
+/* Info Card */
+.info-card{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* Overview */
+.rating-val{
+    font-family: "Lato", sans-serif;
+}
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+  
+.swiper-slide {
+    background-position: center;
+    background-size: contain;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+/* Store Card */
+.store-card-container h1{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
 }

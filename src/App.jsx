@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import NavBar from './components/NavBar'
-import Page1 from './components/Page1';
+import Cursor from './components/Cursor';
+import { ScaleProvider } from './context/ScaleContext';
+import AboutPage from './pages/AboutPage';
+import LandingPage from './pages/LandingPage';
+import StoresPage from './pages/StoresPage';
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState('main-1-full.png');
@@ -27,16 +31,13 @@ function App() {
   return (
     <>
     <div className='main'>
-      <div class="background-container flex">
-        <div class="rectangle-1 h-full w-[5%] rounded-tr-3xl rounded-br-3xl bg-[#fcd3e1]"></div>
-        <div class="rectangle-2 h-full w-[45%] bg-white"></div>
-        <div class="rectangle-3 h-full w-[50%] rounded-tl-3xl rounded-bl-3xl bg-[#fcd3e1]"></div>
-      </div>
-      {/* <div className="landing-page min-h-screen w-full" style={{backgroundImage: `url('../assets/${backgroundImage}')` }}> */}
-      <div className="landing-page min-h-screen w-full">
+      <ScaleProvider>
+        <Cursor />
         <NavBar />
-        <Page1 changeBackground={changeBackground} activeButton={activeButton} pageRightText={pageRightText} rotation={rotation} hide={hide} shake={shake}/>
-      </div>
+        <LandingPage />
+        <AboutPage />
+        <StoresPage />
+      </ScaleProvider>
     </div>
     </>
   );
