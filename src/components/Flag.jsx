@@ -3,6 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Flag2 from './Flag2'
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -56,6 +57,14 @@ export default function Flag() {
     setAnchorEl(null);
   };
 
+  React.useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [open]);
+
   return (
     <div>
       <Button
@@ -70,6 +79,9 @@ export default function Flag() {
             backgroundColor: 'transparent',
             ':hover': {
             backgroundColor: 'rgb(152,152,152)'
+            },
+            transform: {
+              scale: '0.8'
             }
         }}
         // endIcon={<KeyboardArrowDownIcon />}

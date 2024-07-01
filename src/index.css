@@ -17,3 +17,17 @@ html, body {
 }
 * {cursor: url(https://cur.cursors-4u.net/food/foo-6/foo517.cur), auto !important;}
  
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; /* Background color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff69b4; /* Pink color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 3px solid #fff; /* White border around the scrollbar thumb */
+}

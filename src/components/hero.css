@@ -1,0 +1,74 @@
+.btn {
+  @apply py-2 px-4 rounded-lg transition-all;
+}
+
+.btn.hov:hover {
+  @apply scale-110;
+}
+
+.Slider {
+  border-radius: 50%;
+  background: linear-gradient(rgba(239, 205, 171, 0.8), rgba(239, 205, 171, 0.8)),
+  url('../Design/noise.svg');
+  -webkit-mask: radial-gradient(transparent 32rem, #000 90px);
+  mask: radial-gradient(transparent 32rem, #000 90px);
+}
+
+
+@keyframes exitAnimation {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes enterAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+
+@keyframes textExitAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes textEnterAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exit-animation {
+  animation: exitAnimation 1.2s forwards ease-in-out;
+}
+
+.enter-animation {
+  animation: enterAnimation 1.2s forwards ease;
+}
+
+
+.text-exit-animation {
+  animation: textExitAnimation .5s forwards ease-in-out;
+}
+
+.text-enter-animation {
+  animation: textEnterAnimation .6s forwards ease-in-out;
+}

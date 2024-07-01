@@ -1,5 +1,6 @@
 import React from 'react'
 import Flag from './Flag'
+import Flag2 from './Flag2'
 import { useScale } from '../context/ScaleContext';
 
 function Review({pfp, name, description}) {
@@ -13,6 +14,7 @@ function Review({pfp, name, description}) {
           </div>
           {/* <img src="../assets/three-dots-vertical.svg" alt="" /> */}
           <Flag />
+          {/* <Flag2 /> */}
         </div>
         <div className="review-message">
           {description}

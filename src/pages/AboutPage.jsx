@@ -18,14 +18,14 @@ function AboutPage() {
       const tl = gsap.timeline({
         scrollTrigger: {
             trigger: pageRef.current,
-            start: "top 50%",
+            start: "top 20%",
             end: "bottom 50%",
             toggleActions: "play none none none"
         }
       });
       flavors.forEach((flavor) => {
         tl.to(textRef.current, {
-            duration: 0.3,
+            duration: 0.1,
             textContent: flavor,
             ease: "power2.inOut",
         });
@@ -51,8 +51,11 @@ function AboutPage() {
   return (
     <div ref={pageRef} className="about-page min-h-screen bg-pink-500 p-10 flex">
       <div className='fast-animation-text font-extrabold text-[6rem] text-white w-[85%]'>
-        <h1 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >Celebrate <br /> Every Moment with</h1>
-        <h1 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='text-[5rem]' ref={textRef}>{flavors[0]}</h1>
+        <h1>
+          <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Celebrate</span> 
+          <br /> 
+          <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Every Moment</span> <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>with</span></h1>
+        <h1 onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='text-[5rem] w-fit' ref={textRef}>{flavors[0]}</h1>
       </div>
       <div className="about-info w-[60%] font-semibold text-white text-lg p-10">
         <p onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >Baskin Robbins is a well-known international ice cream  chain with a significant presence in India. They offer a wide variety of ice cream flavors, ice cream cakes, sundaes, and beverages. Baskin Robbins in India operates through a franchise model and is popular for its diverse and innovative flavor options, often introducing unique flavors tailored to Indian tastes. The brand maintains its reputation for quality and variety, similar to its global operations.</p>

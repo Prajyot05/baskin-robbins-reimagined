@@ -18,6 +18,13 @@ export default function SwipeableTemporaryDrawer() {
   const [xColor, setXColor] = useState(false);
   const [youtubeColor, setYoutubeColor] = useState(false);
 
+  const scrollToSection = (selector) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const toggleDrawer = (open) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
@@ -41,7 +48,7 @@ export default function SwipeableTemporaryDrawer() {
     <div className="sidebar h-[90vh] flex flex-col justify-between">
       <div className="sidebar-options-container">
         {
-          ['Home', 'About'].map((text) => (
+          ['Home', 'About', 'Stores'].map((text) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               {/* <ListItemText primary={text}/> */}
@@ -52,12 +59,14 @@ export default function SwipeableTemporaryDrawer() {
                       style={{fontFamily: '"Kanit", sans-serif'}} 
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
+                      onClick={() => scrollToSection(`.${text.toLowerCase()}-page`)}
                       >{text}</h4>
                       <h4 
                       className='text-[2rem] cursor-pointer' 
                       style={{fontFamily: '"Kanit", sans-serif'}}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
+                      onClick={() => scrollToSection(`.${text.toLowerCase()}-page`)}
                       >{text}</h4>
                     </div>
                 </ListItemText>

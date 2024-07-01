@@ -50,7 +50,7 @@ export default function InfoCard() {
 
   const tabContent = [
     <div className='overview flex flex-col gap-[1rem] pt-5'>
-      <div className='rating bg-[#efcdab] w-[4rem] h-[5rem] py-6 rounded-2xl'>
+      <div className='rating bg-[#efcdab] w-[4rem] h-[5rem] py-6 ml-10 rounded-2xl'>
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="rating-val -mt-[70%] ml-[30%] text-[#494444] font-semibold text-[3rem]">
           4.9
         </div>
@@ -70,7 +70,7 @@ export default function InfoCard() {
   ];
 
   return (
-    <div className="info-card w-fit rounded-[20px] overflow-hidden">
+    <div className="info-card w-fit transform scale-[0.8] rounded-[20px] absolute right-10 bottom-10 overflow-hidden">
         <Box sx={{ width: '100%'}}>
             <Box sx={{ bgcolor: '#fff'}}>
                 <StyledTabs

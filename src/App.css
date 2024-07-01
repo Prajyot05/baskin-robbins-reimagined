@@ -127,3 +127,19 @@
     font-family: "Lato", sans-serif;
     font-weight: 600;
 }
+
+/* Footer */
+.footer{
+    background: url('/assets/footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-input input{
+    border-radius: 10px 0 0 10px;
+}
+
+.footer-input button{
+    border-radius: 10px;
+}

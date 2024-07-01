@@ -6,6 +6,7 @@ import { ScaleProvider } from './context/ScaleContext';
 import AboutPage from './pages/AboutPage';
 import LandingPage from './pages/LandingPage';
 import StoresPage from './pages/StoresPage';
+import Footer from './components/Footer';
 
 function App() {
   const [backgroundImage, setBackgroundImage] = useState('main-1-full.png');
@@ -37,6 +38,7 @@ function App() {
         <LandingPage />
         <AboutPage />
         <StoresPage />
+        <Footer />
       </ScaleProvider>
     </div>
     </>
