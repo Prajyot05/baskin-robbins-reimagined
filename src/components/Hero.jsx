@@ -87,7 +87,7 @@ const Hero = () => {
             key={index}
             className={`btn flex flex-col items-center h-30 w-26 ease-in ${
               activeImage === index
-                ? "shadow-[12px_25px_30px_rgba(0,0,0,0.3)] scale-125"
+                ? "shadow-[12px_25px_30px_rgba(0,0,0,0.3)] scale-125 border-[.05rem] bg-white"
                 : "hov"
             }`}
             onClick={() => handleButtonClick(index)}
