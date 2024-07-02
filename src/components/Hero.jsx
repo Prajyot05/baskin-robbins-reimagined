@@ -45,18 +45,18 @@ const Hero = () => {
         {activeImage !== null && (
           <>
             <div
-              className={`absolute overflow-x-hidden -top-[60rem] -left-[24rem] h-[85rem] w-[85rem] ${
+              className={`absolute overflow-x-hidden -top-[65rem] -left-[24rem] h-[85rem] w-[85rem] ${
                 exiting ? "exit-animation" : "enter-animation"
               }`}
             >
               <div className="Slider relative h-full w-full"></div>
 
-              <div className="absolute right-[4rem] top-[6rem] z-[99]">
+              <div className="absolute right-[6rem] top-[6rem] z-[99]">
                 <img
                   key={activeImage}
                   src={images[activeImage].src}
                   alt={images[activeImage].label}
-                  className={`mx-auto z-50 h-[23.5rem]`}
+                  className={`mx-auto z-50 h-[19rem]`}
                 />
               </div>
             </div>
@@ -66,14 +66,14 @@ const Hero = () => {
         <div
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`HeroText absolute top-[15rem] left-[29rem] z-50 text-[#494444] ${
+          className={`HeroText absolute top-[12rem] left-[30rem] z-50 text-[#494444] ${
             textExiting ? "text-exit-animation" : "text-enter-animation"
           }`}
         >
-          <h1 className="font-Kanit font-extralight text-[5.5rem]">
+          <h1 className="font-Kanit font-extralight text-[4rem]">
             {images[activeImage].label.split(" ")[0]}
           </h1>
-          <h1 className="font-Kanit font-extrabold text-[5.5rem] -mt-10 tracking-tighter">
+          <h1 className="font-Kanit font-extrabold text-[4rem] -mt-10 tracking-tighter">
             {images[activeImage].label.split(" ")[1]}
           </h1>
         </div>
@@ -85,14 +85,14 @@ const Hero = () => {
         {images.map((image, index) => (
           <button
             key={index}
-            className={`btn flex flex-col items-center h-32 w-26 ease-in ${
+            className={`btn flex flex-col items-center h-30 w-26 ease-in ${
               activeImage === index
                 ? "shadow-[12px_25px_30px_rgba(0,0,0,0.3)] scale-125"
                 : "hov"
             }`}
             onClick={() => handleButtonClick(index)}
           >
-            <img className="h-[5.5rem]" src={image.src} alt={image.label} />
+            <img className="h-[5rem]" src={image.src} alt={image.label} />
             <div className="text-xs mt-2">{image.label.split(" ")[0]}</div>
           </button>
         ))}

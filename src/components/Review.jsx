@@ -13,8 +13,8 @@ function Review({pfp, name, description}) {
             <h4 className='text-2xl'>Name{name}</h4>
           </div>
           {/* <img src="../assets/three-dots-vertical.svg" alt="" /> */}
-          <Flag />
-          {/* <Flag2 /> */}
+          {/* <Flag /> */}
+          <Flag2 />
         </div>
         <div className="review-message">
           {description}

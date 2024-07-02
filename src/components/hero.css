@@ -10,8 +10,9 @@
   border-radius: 50%;
   background: linear-gradient(rgba(239, 205, 171, 0.8), rgba(239, 205, 171, 0.8)),
   url('../Design/noise.svg');
-  -webkit-mask: radial-gradient(transparent 32rem, #000 90px);
-  mask: radial-gradient(transparent 32rem, #000 90px);
+  filter: contrast(100%) brightness(100%);
+  -webkit-mask: radial-gradient(transparent 36rem, #000 90px);
+  mask: radial-gradient(transparent 36rem, #000 90px);
 }
 
 
