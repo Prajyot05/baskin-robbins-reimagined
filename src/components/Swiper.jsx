@@ -42,7 +42,6 @@ export default function StoreSwiper() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={'3'}
         onSlideChange={handleSlideChange}
         loopAdditionalSlides={3}
         coverflowEffect={{
@@ -63,6 +62,24 @@ export default function StoreSwiper() {
           clickable: true,
         }}
         modules={[EffectCoverflow, Pagination, Navigation]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+
         className="mySwiper"
       >
         <SwiperSlide>

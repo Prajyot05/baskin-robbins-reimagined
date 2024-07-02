@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <div className='footer-container bg-pink-500'>
-        <div className='footer relative flex justify-center gap-20 -ml-48 pt-40 items-center text-white min-h-[80vh]'>
+        <div className='footer overflow-x-hidden relative flex justify-center gap-20 -ml-48 pt-40 items-center text-white min-h-[80vh]'>
             <div className="footer-left text-[2rem]">
                 <h4>Home</h4>
                 <h4>About Us</h4>

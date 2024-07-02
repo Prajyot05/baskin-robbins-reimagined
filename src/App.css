@@ -128,6 +128,47 @@
     font-weight: 600;
 }
 
+/* Milkshake Page */
+
+
+.milkshake-page {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.background-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+  
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100vh;
+    /* width: 100%; */
+    /* height: 100%; */
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+  
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Adjust text color for better visibility over video */
+    text-align: center;
+    padding: 20px;
+}
+
 /* Footer */
 .footer{
     background: url('/assets/footer.png');
@@ -142,4 +183,182 @@
 
 .footer-input button{
     border-radius: 10px;
+}
+
+@media (max-width:1000px) {
+    .about-page h1{
+        font-size: 4rem !important;
+    }
+}
+
+@media (max-width:900px) {
+    .about-page{
+        padding: 2rem 0;
+    }
+
+    .animated-text{
+        margin-bottom: 5rem;
+    }
+
+    .about-page{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-info{
+        width: 100%;
+    }
+
+    .trademark-div{
+        justify-content: center;
+    }
+
+    /* .slider-controler{
+        display: none;
+    } */
+
+    .store-swiper{
+        width: 100%;
+    }
+
+    .trademark-div{
+        transform: scale(0.7);
+    }
+
+    .stores-page > h1{
+        font-size: 5rem;
+        padding-top: 5vh;
+    }
+
+    .footer{
+        gap: 2rem;
+        background-position: bottom;
+        background-size: contain;
+        padding-top: 0;
+        height: 10vh;
+    }
+
+    .footer-left{
+        font-size: 1.5rem;
+        padding-top: 25rem;
+    }
+
+    .footer-right{
+        padding-top: 30rem;
+    }
+
+    .footer-right h4{
+        font-size: 1.2rem;
+    }
+
+    .footer-bottom{
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer{
+        gap: 1rem;
+    }
+
+    .footer-left{
+        font-size: 1.2rem;
+        padding-top: 30rem;
+    }
+
+    .footer-right{
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    .about-page{
+        padding: 2rem 0;
+    }
+
+    .fast-animation-text{
+        width: 90%;
+    }
+
+    .about-page h1{
+        font-size: 3rem !important;
+    }
+
+    .store-swiper{
+        width: 100%;
+        padding: 2rem 3rem;
+        padding-top: 0;
+    }
+
+    .store-card{
+        transform: scale(0.7);
+        width: 25rem;
+        height: 35rem;
+    }
+
+    .stores-page > h1{
+        font-size: 4rem;
+        padding-top: 5vh;
+    }
+
+    .trademark-div{
+        transform: scale(0.9);
+    }
+
+    .footer-bottom{
+        transform: scale(0.7);
+    }
+
+    .navbar{
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .fast-animation-text{
+        width: 95%;
+    }
+
+    .about-info{
+        padding-top: 0;
+    }
+    /* .about-page h1{
+        font-size: 2rem !important;
+    } */
+
+    .store-card{
+        transform: scale(0.9);
+        margin-left: -15vw;
+    }
+
+    .trademark-div{
+        transform: scale(1.2);
+    }
+
+    .footer-left{
+        font-size: 1rem;
+        padding-top: 23rem;
+    }
+
+    .navbar{
+        width: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar{
+        width: 50%;
+    }   
+}
+
+@media (max-width: 360px) {
+    .navbar{
+        width: 40%;
+    }   
 }
