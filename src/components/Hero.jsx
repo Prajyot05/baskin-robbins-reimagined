@@ -41,22 +41,22 @@ const Hero = () => {
 
   return (
     <>
-      <div className="Top-container h-screen">
+      <div className="Top-container h-screen w-screen overflow-hidden">
         {activeImage !== null && (
           <>
             <div
-              className={`absolute overflow-x-hidden -top-[65rem] -left-[24rem] h-[85rem] w-[85rem] ${
+              className={`absolute overflow-hidden md:-top-[65rem] md:-left-[24rem] -top-[65rem] -left-[28.8rem] h-[85rem] w-[85rem] ${
                 exiting ? "exit-animation" : "enter-animation"
               }`}
             >
-              <div className="Slider relative h-full w-full"></div>
+              <div className="Slider relative h-full w-full overflow-x-hidden overflow-hidden"></div>
 
               <div className="absolute right-[6rem] top-[6rem] z-[99]">
                 <img
                   key={activeImage}
                   src={images[activeImage].src}
                   alt={images[activeImage].label}
-                  className={`mx-auto z-50 h-[19rem]`}
+                  className={`mx-auto z-50 md:h-[19rem] h-[18rem]`}
                 />
               </div>
             </div>
@@ -66,37 +66,37 @@ const Hero = () => {
         <div
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`HeroText absolute top-[12rem] left-[30rem] z-50 text-[#494444] ${
+          className={`HeroText absolute lg:top-[12rem] lg:left-[30rem] top-[25rem] left-[5.6rem] z-50 text-[#494444] ${
             textExiting ? "text-exit-animation" : "text-enter-animation"
           }`}
         >
-          <h1 className="font-Kanit font-extralight text-[4rem]">
+          <h1 className="font-Kanit font-extralight text-[3rem] md:text-[4rem] text-center">
             {images[activeImage].label.split(" ")[0]}
           </h1>
-          <h1 className="font-Kanit font-extrabold text-[4rem] -mt-10 tracking-tighter">
+          <h1 className="font-Kanit font-extrabold text-[3rem] md:text-[4rem] -mt-5 md:-mt-10 text-center tracking-tighter">
             {images[activeImage].label.split(" ")[1]}
           </h1>
         </div>
       </div>
-      <div className="LowButtons z-50 absolute bottom-5 mb-12 ml-40 flex items-center gap-4">
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl mr-4 font-bold px-4 py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handlePrevClick}>
+      <div className="LowButtons z-50 absolute bottom-5 lg:mb-12 lg:ml-40 mb-14 ml-0 flex items-center lg:gap-4">
+        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl mr-4 font-bold px-2 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handlePrevClick}>
           &lt;
         </button>
         {images.map((image, index) => (
           <button
             key={index}
-            className={`btn flex flex-col items-center h-30 w-26 ease-in ${
+            className={`btn flex flex-col items-center w-fit md:h-30 md:w-26 ease-in ${
               activeImage === index
-                ? "shadow-[12px_25px_30px_rgba(0,0,0,0.3)] scale-125 border-[.05rem] bg-white"
+                ? "md:shadow-[12px_25px_30px_rgba(0,0,0,0.3)] scale-125 md:border-[.05rem] bg-white"
                 : "hov"
             }`}
             onClick={() => handleButtonClick(index)}
           >
-            <img className="h-[5rem]" src={image.src} alt={image.label} />
-            <div className="text-xs mt-2">{image.label.split(" ")[0]}</div>
+            <img className="lg:h-[5rem] h-[2.5rem]" src={image.src} alt={image.label} />
+            <div className="lg:text-xs text-[.6rem] mt-2">{image.label.split(" ")[0]}</div>
           </button>
         ))}
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl ml-4 font-bold px-4 py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handleNextClick}>
+        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl ml-4 font-bold px-2 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handleNextClick}>
           &gt;
         </button>
       </div>

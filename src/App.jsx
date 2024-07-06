@@ -35,7 +35,7 @@ function App() {
     <div className='main'>
       <ScaleProvider>
         <Cursor />
-        <NavBar />
+        <NavBar/>
         <LandingPage />
         <AboutPage />
         <Milkshake />

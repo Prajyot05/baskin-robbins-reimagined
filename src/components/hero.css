@@ -1,3 +1,28 @@
+.Top-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.HeroText {
+  text-align: center;
+  color: #494444;
+}
+
+.LowButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  
+
+}
+
 .btn {
   @apply py-2 px-4 rounded-lg transition-all;
 }
