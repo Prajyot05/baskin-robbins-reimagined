@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Opening Page */
+.opening-page{
+    background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+}
+
+.subtitle h4{
+    /* text-shadow:0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff; */
+    text-shadow: rgba(255,255,255,1) 0px 0px 22px;
+}
+
+/* .opening-page h4{
+    background: linear-gradient(90deg, rgba(76,198,240,1) 0%, rgba(231,240,76,1) 100%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
+
+/* Landing Page */
+
+.landing-page{
+    /* background-image: -webkit-linear-gradient( -14deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
+    /* background-image: linear-gradient( -60deg, #D8AE7D 0%, #D8AE7D 50%, #FEFFAE 50%,#FEFFAE 100%); */
+    /* background-image: url('../assets/main-1.svg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease-out;
+}
+
+/* Background */
+
+.background-container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Cursor */
+.cursor-enlarge:hover .cursor-outline{
+    transform: scale(1.5);
+    transition: transform ease 0.3s;
+}
+
+.css-19tgaqb-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    font-size: 1.5rem;
+    color: gray;
+    margin-left: 5rem;
+}
+
+.social-links{
+    transition: sll ease 0.3s;
+}
+
+/* Navbar */
+
+.nav-clicked{
+    background-color: #fff;
+}
+
+.delivery-img{
+    transition: transform ease 0.3s;
+}
+
+.nav-right h4, .sidebar-social h3, .about-page h1, .stores-page h1{
+    font-family: "Kanit", sans-serif;
+}
+
+.sidebar-options h4{
+    transition: transform ease 0.3s;
+}
+
+.sidebar-options:hover h4{
+    transform: translateY(-100%);
+}
+
+/* Page 1 */
+
+.title h1, .title h2{
+    font-family: "Shrikhand", serif;
+    line-height: 80%;
+}
+
+.title h1{
+    text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.description p{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+
+.page1-hoverables img{
+    transition: padding ease 0.3s;
+}
+
+/* Info Card */
+.info-card{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* Overview */
+.rating-val{
+    font-family: "Lato", sans-serif;
+}
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+  
+.swiper-slide {
+    background-position: center;
+    background-size: contain;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+/* Store Card */
+.store-card-container h1{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+}
+  
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Adjust text color for better visibility over video */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+.footer{
+    background: url('/assets/footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-input input{
+    border-radius: 10px 0 0 10px;
+}
+
+.footer-input button{
+    border-radius: 10px;
+}
+
+@media (max-width:1000px) {
+    .about-page h1{
+        font-size: 4rem !important;
+    }
+}
+
+@media (max-width:900px) {
+    .about-page{
+        padding: 2rem 0;
+    }
+
+    .animated-text{
+        margin-bottom: 5rem;
+    }
+
+    .about-page{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-info{
+        width: 100%;
+    }
+
+    .trademark-div{
+        justify-content: center;
+    }
+
+    /* .slider-controler{
+        display: none;
+    } */
+
+    .store-swiper{
+        width: 100%;
+    }
+
+    .trademark-div{
+        transform: scale(0.7);
+    }
+
+    .stores-page > h1{
+        font-size: 5rem;
+        padding-top: 5vh;
+    }
+
+    .footer{
+        gap: 2rem;
+        background-position: bottom;
+        background-size: contain;
+        padding-top: 0;
+        height: 10vh;
+    }
+
+    .footer-left{
+        font-size: 1.5rem;
+        padding-top: 25rem;
+    }
+
+    .footer-right{
+        padding-top: 30rem;
+    }
+
+    .footer-right h4{
+        font-size: 1.2rem;
+    }
+
+    .footer-bottom{
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    .footer{
+        gap: 1rem;
+    }
+
+    .footer-left{
+        font-size: 1.2rem;
+        padding-top: 30rem;
+    }
+
+    .footer-right{
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    .about-page{
+        padding: 2rem 0;
+    }
+
+    .fast-animation-text{
+        width: 90%;
+    }
+
+    .about-page h1{
+        font-size: 3rem !important;
+    }
+
+    .store-swiper{
+        width: 100%;
+        padding: 2rem 3rem;
+        padding-top: 0;
+    }
+
+    .store-card{
+        transform: scale(0.7);
+        width: 25rem;
+        height: 35rem;
+    }
+
+    .stores-page > h1{
+        font-size: 4rem;
+        padding-top: 5vh;
+    }
+
+    .trademark-div{
+        transform: scale(0.9);
+    }
+
+    .footer-bottom{
+        transform: scale(0.7);
+    }
+
+    .navbar{
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar{
+        width: 100%;
+    }
+
+    .footer{
+        background-size: contain;
+    }
+}
+
+@media (max-width: 500px) {
+    .fast-animation-text{
+        width: 95%;
+    }
+
+    .about-info{
+        padding-top: 0;
+    }
+    /* .about-page h1{
+        font-size: 2rem !important;
+    } */
+
+    .store-card{
+        transform: scale(0.9);
+        margin-left: -15vw;
+    }
+
+    .trademark-div{
+        transform: scale(1.2);
+    }
+
+    .footer-left{
+        font-size: 1rem;
+        padding-top: 23rem;
+    }
+
+    .navbar{
+        width: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar{
+        width: 50%;
+    }   
+}
+
+@media (max-width: 360px) {
+    .navbar{
+        width: 40%;
+    }   
+}
