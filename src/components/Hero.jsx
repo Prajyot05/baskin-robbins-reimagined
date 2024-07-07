@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./hero.css";
 import { useScale } from "../context/ScaleContext";
+import Ingridients from "/assets/ingridients.png";
+import Home from "/assets/Home.png"
 
 const images = [
   { src: "/assets/ice-cream-1.png", label: "Strawberry Dragonfruit" },
@@ -78,6 +80,18 @@ const Hero = () => {
           </h1>
         </div>
       </div>
+
+      <div className="Highbuttons absolute top-1/2 left-1/4 ml-3 mt-36 flex flex-col gap-6 md:top-[14rem] md:left-[27rem] md:flex-row">
+        <button className="font-Kanit h-[40px] w-[200px] flex items-center justify-evenly shadow-[12px_25px_30px_rgba(0,0,0,0.3)] border-[.05rem] rounded-md z-[99] bg-white">
+          <img src={Ingridients} className=" w-[1.5rem]"/>
+          <h2>Ingredients</h2>
+        </button>
+        <button className="font-Kanit h-[40px] w-[200px] flex items-center justify-evenly  shadow-[12px_25px_30px_rgba(0,0,0,0.3)] border-[.05rem] rounded-md z-[99] bg-white">
+          <img src={Home} className=" w-[1.5rem]" />
+          <h2>Order Liciously</h2>
+        </button>
+      </div>
+      
       <div className="LowButtons z-50 absolute md:bottom-0 -bottom-16 md:mb-12 md:ml-40 mb-24 ml-0 flex items-center md:gap-4">
         <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl md:mr-4 mr-2 font-bold px-3 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handlePrevClick}>
           &lt;

@@ -19,8 +19,21 @@
 }
 
 @media (max-width: 768px) {
-  
+  .HeroText {
+    margin-left: 14rem;
+  }
+  .Highbuttons {
+    margin-left: 20rem;
+  }
+}
 
+@media (min-width: 400px) {
+  .HeroText {
+    margin-left: 0;
+  }
+  .Highbuttons {
+    margin-left: .75rem;
+  }
 }
 
 .btn {
