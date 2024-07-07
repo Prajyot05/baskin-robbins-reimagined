@@ -66,7 +66,7 @@ const Hero = () => {
         <div
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`HeroText absolute lg:top-[12rem] lg:left-[30rem] top-[25rem] left-[5.6rem] z-50 text-[#494444] ${
+          className={`HeroText md:absolute mt-12 md:mt-0 md:top-[12rem] relative md:left-[30rem] z-50 text-[#494444] ${
             textExiting ? "text-exit-animation" : "text-enter-animation"
           }`}
         >
@@ -78,8 +78,8 @@ const Hero = () => {
           </h1>
         </div>
       </div>
-      <div className="LowButtons z-50 absolute bottom-5 lg:mb-12 lg:ml-40 mb-14 ml-0 flex items-center lg:gap-4">
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl mr-4 font-bold px-2 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handlePrevClick}>
+      <div className="LowButtons z-50 absolute md:bottom-0 -bottom-16 md:mb-12 md:ml-40 mb-24 ml-0 flex items-center md:gap-4">
+        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl md:mr-4 mr-2 font-bold px-3 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handlePrevClick}>
           &lt;
         </button>
         {images.map((image, index) => (
@@ -92,11 +92,11 @@ const Hero = () => {
             }`}
             onClick={() => handleButtonClick(index)}
           >
-            <img className="lg:h-[5rem] h-[2.5rem]" src={image.src} alt={image.label} />
+            <img className="lg:h-[5rem] h-[2.3rem]" src={image.src} alt={image.label} />
             <div className="lg:text-xs text-[.6rem] mt-2">{image.label.split(" ")[0]}</div>
           </button>
         ))}
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl ml-4 font-bold px-2 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handleNextClick}>
+        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="text-2xl md:ml-4 ml-3 font-bold px-3 py-1 md:px-4 md:py-2 rounded-lg bg-[#F3E2D3] hover:bg-[#EFCDAB] transition-all" onClick={handleNextClick}>
           &gt;
         </button>
       </div>
